@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gửi Đế Dịch Long</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(180deg,#dbeafe,#bfdbfe,#93c5fd);
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1e3a8a;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:white;
+    animation:float 8s linear infinite;
+    opacity:.7;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+.card{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,.7);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+h1{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    opacity:.8;
+    margin-bottom:25px;
+}
+
+button{
+    border:none;
+    background:#3b82f6;
+    color:white;
+    padding:12px 25px;
+    border-radius:999px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#letter{
+    display:none;
+    margin-top:20px;
+    text-align:left;
+    line-height:1.9;
+    white-space:pre-line;
+}
+
+.signature{
+    margin-top:25px;
+    text-align:right;
+    font-style:italic;
+}
+
+.final{
+    text-align:center;
+    margin-top:20px;
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="card">
+    <div id="intro">
+        <h1>💌 Gửi đến Đế Dịch Long</h1>
+        <p class="subtitle">
+            Hôm nay là một ngày đặc biệt.
+        </p>
+
+        <button onclick="openLetter()">
+            Mở thư
+        </button>
+    </div>
+
+    <div id="letter"></div>
+</div>
+
+<script>
+
+for(let i=0;i<70;i++){
+    let s=document.createElement("div");
+    s.className="star";
+    s.style.left=Math.random()*100+"%";
+    s.style.animationDuration=(6+Math.random()*8)+"s";
+    s.style.opacity=Math.random();
+    document.getElementById("stars").appendChild(s);
+}
+
+const text=`Dịch Long ơi.
+
+Lại thêm một tuổi rồi nhỉ.
+
+Thật ra tớ đã nghĩ khá lâu xem nên viết gì cho ngày hôm nay.
+
+Bởi vì có những người rất dễ chúc mừng sinh nhật.
+Nhưng cũng có những người khiến Dương muốn viết nhiều hơn vài câu "tuổi mới vui vẻ".
+
+Cậu thuộc kiểu thứ hai, siêu đặc biệt.
+
+Một năm vừa qua chắc hẳn cũng có không ít chuyện xảy ra.
+
+Có những ngày vui.
+Có những ngày mệt.
+
+Nhưng dù thế nào,
+em bé vẫn đi được đến ngày hôm nay rồi.
+
+Đó đã là một điều rất đáng tự hào.
+
+Tuổi mới không cần phải trở nên hoàn hảo hơn.
+
+Chỉ mong cậu sẽ vui vẻ hơn một chút.
+Ngủ ngon hơn một chút.
+Ít áp lực hơn một chút.
+
+Và gặp nhiều điều khiến cậu mỉm cười hơn một chút.
+
+Mong những dự định của cậu sẽ thuận lợi.
+
+Mong những điều cậu đang cố gắng sẽ có kết quả xứng đáng.
+
+Mong rằng cuộc sống sẽ dịu dàng với cậu hơn.
+
+Cảm ơn vì đã là Đế Dịch Long, và cảm ơn đã xuất hiện và làm bạn với t
+
+Chúc mừng sinh nhật.
+
+Happy Birthday. ✨`;
+
+function openLetter(){
+
+    document.getElementById("intro").style.display="none";
+
+    let box=document.getElementById("letter");
+    box.style.display="block";
+
+    let i=0;
+
+    function type(){
+        if(i<text.length){
+            box.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type,30);
+        }else{
+            box.innerHTML += `
+            <div class="signature">
+            — Người luôn mong cậu cười 💙
+            </div>
+
+            <div class="final">
+            🎂 Sinh nhật vui vẻ 🎂
+            </div>`;
+        }
+    }
+
+    type();
+}
+
+</script>
+
+</body>
+</html>
