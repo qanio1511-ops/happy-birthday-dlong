@@ -169,10 +169,10 @@ body{
 </div>
 <script>
 function openWish(){
-    document
-    .getElementById("bgm").play();
-    .classList
-    .add("show");
+    document.getElementById("bgm").play();
+    
+    document.getElementById("wish").classList.add("show");
+
     createFireworks();
 }
 for(let i=0;i<150;i++){
@@ -221,7 +221,7 @@ function createFireworks(){
     }
 }
 </script>
-    <audio id="bgm" autoplay loop>
+    <audio id="bgm" loop>
     <source src="hai mươi hai (22).mp3" type="audio/mpeg">
 </audio>
 </body>
