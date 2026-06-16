@@ -3,228 +3,436 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 <title>Happy Birthday Dịch Long 💙</title>
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Quicksand',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Quicksand",sans-serif;
 }
 body{
-    overflow:hidden;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(
-        135deg,
-        #9ddcff,
-        #d7f0ff,
-        #f8fdff
-    );
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:
+linear-gradient(
+135deg,
+#a6ddff,
+#d9f1ff,
+#f7fcff
+);
+position:relative;
 }
+/* CARD */
 .container{
-    text-align:center;
-    z-index:10;
-    padding:50px;
-    border-radius:30px;
-    background:rgba(255,255,255,.18);
-    backdrop-filter:blur(20px);
-    box-shadow:
-    0 0 30px rgba(255,255,255,.6);
+text-align:center;
+padding:60px;
+width:90%;
+max-width:900px;
+
+border-radius:40px;
+
+background:
+rgba(255,255,255,.15);
+
+backdrop-filter:
+blur(22px);
+
+box-shadow:
+
+0 0 50px rgba(255,255,255,.6);
+
+z-index:10;
+
 }
+
+/* TITLE */
+
 .title{
-    font-size:4rem;
-    color:white;
-    text-shadow:
-    0 0 20px white,
-    0 0 40px #7dd3fc,
-    0 0 60px #38bdf8;
-    animation:
-    glow 1.5s infinite alternate,
-    float 3s infinite ease-in-out;
+
+font-size:4.5rem;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+color:#ffffff;
+
+text-shadow:
+
+0 0 5px rgba(255,255,255,.95),
+
+0 0 15px rgba(191,232,255,.95),
+
+0 0 35px rgba(155,220,255,.95),
+
+0 0 70px rgba(120,210,255,.8);
+
+filter:
+drop-shadow(
+0 12px 24px
+rgba(140,210,255,.25)
+);
+
+animation:
+
+glow 2s ease-in-out infinite alternate,
+
+float 4s ease-in-out infinite;
+
 }
-.subtitle{
-    margin-top:20px;
-    color:white;
-    font-size:1.4rem;
-    line-height:1.8;
-    font-weight:500;
-    letter-spacing:1px;
-}
-.btn{
-    margin-top:30px;
-    border:none;
-    padding:15px 30px;
-    border-radius:50px;
-    background:white;
-    color:#0ea5e9;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-.btn:hover{
-    transform:scale(1.1);
-}
-.message{
-    margin-top:25px;
-    color:white;
-    font-size:1.2rem;
-    opacity:0;
-    transition:1s;
-}
-.show{
-    opacity:1;
-}
+
 @keyframes glow{
-    from{
-        text-shadow:
-        0 0 20px white,
-        0 0 30px #7dd3fc;
-    }
-    to{
-        text-shadow:
-        0 0 30px white,
-        0 0 60px #38bdf8,
-        0 0 90px #38bdf8;
-    }
+
+from{
+
+text-shadow:
+
+0 0 10px white,
+
+0 0 25px #d7f0ff,
+
+0 0 45px #9ddcff,
+
+0 0 70px #7dd3fc;
+
 }
+
+to{
+
+text-shadow:
+
+0 0 15px white,
+
+0 0 40px #d7f0ff,
+
+0 0 70px #9ddcff,
+
+0 0 120px #60d5ff;
+
+}
+
+}
+
 @keyframes float{
-    50%{
-        transform:translateY(-12px);
-    }
+
+50%{
+
+transform:
+translateY(-8px);
+
 }
+
+}
+
+/* SUB */
+
+.subtitle{
+
+margin-top:25px;
+
+font-size:1.5rem;
+
+color:white;
+
+line-height:1.8;
+
+}
+
+/* BUTTON */
+
+.btn{
+
+margin-top:35px;
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:999px;
+
+background:white;
+
+color:#0ea5e9;
+
+font-size:1rem;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:
+translateY(-5px);
+
+box-shadow:
+
+0 15px 30px
+rgba(120,200,255,.4);
+
+}
+
+/* MESSAGE */
+
+.message{
+
+margin-top:35px;
+
+font-size:1.2rem;
+
+line-height:2;
+
+color:white;
+
+opacity:0;
+
+max-height:0;
+
+overflow:hidden;
+
+transition:
+
+opacity 1s,
+
+max-height 1s;
+
+}
+
+.message.show{
+
+opacity:1;
+
+max-height:700px;
+
+}
+
+/* STAR */
+
 .star{
-    position:absolute;
-    background:white;
-    border-radius:50%;
-    animation:twinkle 2s infinite;
+
+position:absolute;
+
+width:4px;
+
+height:4px;
+
+background:white;
+
+border-radius:50%;
+
+animation:
+
+twinkle 3s infinite;
+
 }
+
 @keyframes twinkle{
-    50%{
-        opacity:1;
-        transform:scale(2);
-    }
+
+50%{
+
+opacity:.3;
+
+transform:
+scale(2);
+
 }
-.heart{
-    position:absolute;
-    animation:fly 10s linear infinite;
+
 }
-@keyframes fly{
-    from{
-        transform:translateY(110vh);
-        opacity:0;
-    }
-    to{
-        transform:translateY(-120vh);
-        opacity:1;
-    }
-}
+
+/* FIREWORK */
+
 .firework{
-    position:absolute;
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:white;
-    animation:explode 1.5s ease-out forwards;
+
+position:absolute;
+
+width:8px;
+
+height:8px;
+
+background:white;
+
+border-radius:50%;
+
+animation:
+
+explode 1.4s forwards;
+
 }
+
 @keyframes explode{
-    from{
-        transform:translate(0,0);
-        opacity:1;
-    }
-    to{
-        transform:
-        translate(
-            calc(var(--x) * 1px),
-            calc(var(--y) * 1px)
-        );
-        opacity:0;
-    }
+
+from{
+
+transform:
+translate(0,0);
+
+opacity:1;
+
 }
+
+to{
+
+transform:
+
+translate(
+
+calc(var(--x)*1px),
+
+calc(var(--y)*1px)
+
+);
+
+opacity:0;
+
+}
+
+}
+
 </style>
 </head>
-<body>
-<div class="container">
-    <h1 class="title">
-        🎂 Happy Birthday Dịch Long 💙
-    </h1>
-    <p class="subtitle">
-        Chúc m luôn vui vẻ,<br>
-        luôn gặp những điều tốt đẹp nhất ✨
-    </p>
-    <button class="btn" onclick="openWish()">
-        💌 Vừng ơi mở ra
-    </button>
-    <p class="message" id="wish">
-        Cảm ơn m vì đã xuất hiện ở GHA, 
-        biến mọi thứ tẻ nhạt trở nên có niềm vui để t ở lại.<br>
-        Mong tuổi mới sẽ mang đến cho m thật nhiều tiếng cười,
-        thật nhiều hạnh phúc và những điều tuyệt vời nhất nhất nhất luôn. 
-        T biết t gửi lời chúc muộn vl rồi nhưng 
-        vẫn muốn chúc m lời chúc trọn vẹn nhất 💙✨
-    </p>
-</div>
-<script>
-function openWish(){
-    document.getElementById("bgm").play();
-    
-    document.getElementById("wish").classList.add("show");
 
-    createFireworks();
-}
-for(let i=0;i<150;i++){
-    const star=document.createElement("div");
-    star.className="star";
-    let size=Math.random()*4;
-    star.style.width=size+"px";
-    star.style.height=size+"px";
-    star.style.left=Math.random()*100+"vw";
-    star.style.top=Math.random()*100+"vh";
-    star.style.animationDelay=
-    Math.random()*3+"s";
-    document.body.appendChild(star);
-}
-for(let i=0;i<40;i++){
-    const heart=document.createElement("div");
-    heart.className="heart";
-    heart.innerHTML="💙";
-    heart.style.left=
-    Math.random()*100+"vw";
-    heart.style.fontSize=
-    (20+Math.random()*20)+"px";
-    heart.style.animationDelay=
-    Math.random()*10+"s";
-    document.body.appendChild(heart);
-}
-function createFireworks(){
-    for(let i=0;i<60;i++){
-        const fw=
-        document.createElement("div");
-        fw.className="firework";
-        fw.style.left="50%";
-        fw.style.top="50%";
-        fw.style.setProperty(
-        "--x",
-        (Math.random()-0.5)*500
-        );
-        fw.style.setProperty(
-        "--y",
-        (Math.random()-0.5)*500
-        );
-        document.body.appendChild(fw);
-        setTimeout(()=>{
-            fw.remove();
-        },1500);
-    }
-}
-</script>
-    <audio id="bgm" loop>
-    <source src="hai mươi hai (22).mp3" type="audio/mpeg">
+<body>
+
+<div class="container">
+
+<h1 class="title">
+🎂 Happy Birthday Dịch Long 💙
+</h1>
+
+<p class="subtitle">
+
+Chúc m luôn vui vẻ,<br>
+
+luôn gặp những điều tốt đẹp nhất ✨
+
+</p>
+
+<button
+class="btn"
+onclick="openWish()">
+
+💌 Vừng ơi mở ra
+
+</button>
+
+<p
+class="message"
+id="wish">
+
+Cảm ơn m vì đã xuất hiện ở GHA,
+biến mọi thứ tẻ nhạt trở nên có niềm vui để t ở lại 💙
+
+<br><br>
+
+Mong tuổi mới sẽ mang đến cho m
+thật nhiều tiếng cười,
+thật nhiều hạnh phúc
+và những điều tuyệt vời nhất ✨
+
+<br><br>
+
+Dù gửi lời chúc hơi muộn
+nhưng vẫn mong m sẽ có
+một tuổi mới thật đẹp.
+
+</p>
+
+</div>
+
+<audio id="bgm" loop>
+<source src="hai mươi hai (22).mp3">
 </audio>
+
+<script>
+
+function openWish(){
+
+document
+.getElementById("wish")
+.classList
+.add("show");
+
+document
+.getElementById("bgm")
+.play()
+.catch(()=>{});
+
+createFireworks();
+
+}
+
+for(let i=0;i<120;i++){
+
+const star=
+document.createElement("div");
+
+star.className=
+"star";
+
+star.style.left=
+Math.random()*100+"vw";
+
+star.style.top=
+Math.random()*100+"vh";
+
+star.style.animationDelay=
+Math.random()*4+"s";
+
+document.body.appendChild(star);
+
+}
+
+function createFireworks(){
+
+for(let i=0;i<60;i++){
+
+const fw=
+document.createElement("div");
+
+fw.className=
+"firework";
+
+fw.style.left=
+"50%";
+
+fw.style.top=
+"50%";
+
+fw.style.setProperty(
+"--x",
+(Math.random()-0.5)*700
+);
+
+fw.style.setProperty(
+"--y",
+(Math.random()-0.5)*700
+);
+
+document.body.appendChild(fw);
+
+setTimeout(()=>{
+
+fw.remove();
+
+},1400);
+
+}
+
+}
+
+</script>
+
 </body>
+
 </html>
 
 
