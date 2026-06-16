@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,15 +31,15 @@ justify-content:center;
 
 align-items:center;
 
-position:relative;
-
 background:
 linear-gradient(
 135deg,
-#bfe8ff,
-#dff5ff,
-#f6fcff
+#a8ddff,
+#dff4ff,
+#f7fcff
 );
+
+position:relative;
 
 }
 
@@ -52,18 +54,18 @@ padding:60px;
 
 text-align:center;
 
-border-radius:40px;
+border-radius:36px;
 
 background:
-rgba(255,255,255,.42);
+rgba(255,255,255,.65);
 
 backdrop-filter:
-blur(14px);
+blur(12px);
 
 box-shadow:
 
-0 20px 60px
-rgba(120,190,255,.18);
+0 15px 50px
+rgba(120,190,255,.15);
 
 z-index:10;
 
@@ -77,15 +79,16 @@ font-size:4rem;
 
 font-weight:700;
 
-color:#4a89b8;
+color:#6aaed6;
 
 letter-spacing:2px;
 
+line-height:1.2;
+
 text-shadow:
 
-0 2px 10px rgba(255,255,255,.8),
-
-0 0 25px rgba(120,210,255,.35);
+0 0 10px
+rgba(200,235,255,.7);
 
 animation:
 float 4s ease-in-out infinite;
@@ -103,17 +106,17 @@ translateY(-8px);
 
 }
 
-/* SUB */
+/* SUBTITLE */
 
 .subtitle{
 
 margin-top:20px;
 
-font-size:1.4rem;
+font-size:1.35rem;
 
-line-height:1.9;
+line-height:1.8;
 
-color:#4d7191;
+color:#78aeca;
 
 }
 
@@ -123,27 +126,23 @@ color:#4d7191;
 
 margin-top:35px;
 
-padding:18px 42px;
+padding:18px 40px;
 
 border:none;
 
 border-radius:999px;
 
-background:
+background:white;
 
-linear-gradient(
-135deg,
-white,
-#eef9ff
-);
+color:#6aaed6;
 
-color:#3a88c0;
+font-size:1rem;
 
 font-weight:700;
 
 cursor:pointer;
 
-transition:.35s;
+transition:.3s;
 
 }
 
@@ -154,8 +153,8 @@ translateY(-4px);
 
 box-shadow:
 
-0 15px 35px
-rgba(150,220,255,.45);
+0 10px 30px
+rgba(150,220,255,.35);
 
 }
 
@@ -169,7 +168,7 @@ font-size:1.15rem;
 
 line-height:2;
 
-color:#4d7191;
+color:#7caec9;
 
 opacity:0;
 
@@ -178,7 +177,6 @@ max-height:0;
 overflow:hidden;
 
 transition:
-
 opacity .8s,
 max-height 1s;
 
@@ -202,9 +200,9 @@ width:4px;
 
 height:4px;
 
-border-radius:50%;
-
 background:white;
+
+border-radius:50%;
 
 opacity:.7;
 
@@ -238,7 +236,7 @@ height:8px;
 
 border-radius:50%;
 
-background:#7dd3fc;
+background:#9edcff;
 
 animation:
 explode 1.3s forwards;
@@ -280,9 +278,7 @@ opacity:0;
 <div class="container">
 
 <h1 class="title">
-
 🎂 Happy Birthday Dịch Long 💙
-
 </h1>
 
 <p class="subtitle">
@@ -305,21 +301,21 @@ id="wish"
 class="message">
 
 Cảm ơn m vì đã xuất hiện ở GHA,
-biến những ngày bình thường
-thành những ngày có nhiều niềm vui hơn 💙
+biến mọi thứ tẻ nhạt
+trở nên vui hơn 💙
 
 <br><br>
 
-Mong tuổi mới của m
-sẽ thật nhiều tiếng cười,
+Mong tuổi mới sẽ mang đến
+cho m thật nhiều tiếng cười,
 thật nhiều hạnh phúc
-và gặp thật nhiều điều đẹp đẽ.
+và những điều thật đẹp ✨
 
 <br><br>
 
-Dù gửi hơi muộn
-nhưng đây vẫn là
-một lời chúc thật lòng ✨
+Dù gửi lời chúc hơi muộn
+nhưng vẫn mong m
+sẽ có một năm thật tuyệt.
 
 </p>
 
@@ -352,7 +348,8 @@ for(let i=0;i<120;i++){
 const star=
 document.createElement("div");
 
-star.className="star";
+star.className=
+"star";
 
 star.style.left=
 Math.random()*100+"vw";
@@ -377,9 +374,11 @@ document.createElement("div");
 fw.className=
 "firework";
 
-fw.style.left="50%";
+fw.style.left=
+"50%";
 
-fw.style.top="50%";
+fw.style.top=
+"50%";
 
 fw.style.setProperty(
 "--x",
@@ -408,10 +407,4 @@ fw.remove();
 </body>
 
 </html>
-
-
-
-
-
-
 
